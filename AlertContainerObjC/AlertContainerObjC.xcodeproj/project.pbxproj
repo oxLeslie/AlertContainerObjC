@@ -13,6 +13,10 @@
 		D48C8D4520E6025100CBD85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48C8D4420E6025100CBD85D /* Assets.xcassets */; };
 		D48C8D4820E6025100CBD85D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48C8D4620E6025100CBD85D /* LaunchScreen.storyboard */; };
 		D48C8D4B20E6025100CBD85D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D48C8D4A20E6025100CBD85D /* main.m */; };
+		D48C8D5420E6269C00CBD85D /* AlertContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D48C8D5320E6269C00CBD85D /* AlertContainer.m */; };
+		D48C8D5720E6290000CBD85D /* AutoScale.m in Sources */ = {isa = PBXBuildFile; fileRef = D48C8D5620E6290000CBD85D /* AutoScale.m */; };
+		D48C8D5A20E62CAC00CBD85D /* AlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48C8D5920E62CAC00CBD85D /* AlertContentView.m */; };
+		D48C8D5D20E6319700CBD85D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D48C8D5C20E6319700CBD85D /* Utils.m */; };
 		D8FCDF07E7A5D2E873403380 /* libPods-AlertContainerObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A08ADCE1943BE66E32075C /* libPods-AlertContainerObjC.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,14 @@
 		D48C8D4720E6025100CBD85D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48C8D4920E6025100CBD85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D48C8D4A20E6025100CBD85D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D48C8D5220E6269C00CBD85D /* AlertContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertContainer.h; sourceTree = "<group>"; };
+		D48C8D5320E6269C00CBD85D /* AlertContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertContainer.m; sourceTree = "<group>"; };
+		D48C8D5520E6290000CBD85D /* AutoScale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoScale.h; sourceTree = "<group>"; };
+		D48C8D5620E6290000CBD85D /* AutoScale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoScale.m; sourceTree = "<group>"; };
+		D48C8D5820E62CAC00CBD85D /* AlertContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertContentView.h; sourceTree = "<group>"; };
+		D48C8D5920E62CAC00CBD85D /* AlertContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertContentView.m; sourceTree = "<group>"; };
+		D48C8D5B20E6315600CBD85D /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		D48C8D5C20E6319700CBD85D /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +94,11 @@
 		D48C8D3A20E6024E00CBD85D /* AlertContainerObjC */ = {
 			isa = PBXGroup;
 			children = (
+				D48C8D5120E625F300CBD85D /* module */,
 				D48C8D3B20E6024E00CBD85D /* AppDelegate.h */,
 				D48C8D3C20E6024E00CBD85D /* AppDelegate.m */,
+				D48C8D5820E62CAC00CBD85D /* AlertContentView.h */,
+				D48C8D5920E62CAC00CBD85D /* AlertContentView.m */,
 				D48C8D3E20E6024E00CBD85D /* ViewController.h */,
 				D48C8D3F20E6024F00CBD85D /* ViewController.m */,
 				D48C8D4120E6024F00CBD85D /* Main.storyboard */,
@@ -93,6 +108,19 @@
 				D48C8D4A20E6025100CBD85D /* main.m */,
 			);
 			path = AlertContainerObjC;
+			sourceTree = "<group>";
+		};
+		D48C8D5120E625F300CBD85D /* module */ = {
+			isa = PBXGroup;
+			children = (
+				D48C8D5B20E6315600CBD85D /* Utils.h */,
+				D48C8D5C20E6319700CBD85D /* Utils.m */,
+				D48C8D5520E6290000CBD85D /* AutoScale.h */,
+				D48C8D5620E6290000CBD85D /* AutoScale.m */,
+				D48C8D5220E6269C00CBD85D /* AlertContainer.h */,
+				D48C8D5320E6269C00CBD85D /* AlertContainer.m */,
+			);
+			path = module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48C8D4020E6024F00CBD85D /* ViewController.m in Sources */,
+				D48C8D5A20E62CAC00CBD85D /* AlertContentView.m in Sources */,
 				D48C8D4B20E6025100CBD85D /* main.m in Sources */,
+				D48C8D5420E6269C00CBD85D /* AlertContainer.m in Sources */,
+				D48C8D5720E6290000CBD85D /* AutoScale.m in Sources */,
+				D48C8D5D20E6319700CBD85D /* Utils.m in Sources */,
 				D48C8D3D20E6024E00CBD85D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
