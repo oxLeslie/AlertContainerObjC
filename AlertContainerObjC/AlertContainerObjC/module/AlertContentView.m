@@ -33,6 +33,8 @@
 #pragma mark - UI
 - (void)setupSubView {
     self.backgroundColor = [UIColor whiteColor];
+    self.layer.cornerRadius = scaleX(10.0f);
+    self.layer.masksToBounds = YES;
     
     [self addSubview:self.titleLabel];
     [self addSubview:self.messageLabel];
@@ -51,14 +53,12 @@
         make.top.equalTo(self).offset(scaleY(24.0f));
         make.centerX.equalTo(self);
         make.width.mas_equalTo(width);
-        make.height.mas_equalTo(scaleY(25.0f));
     }];
     
     [self.messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.titleLabel.mas_bottom).offset(scaleY(10.0f));
         make.centerX.equalTo(self);
         make.width.mas_equalTo(width);
-        make.height.mas_equalTo(0.0f);
     }];
     
     [self.horizontalLine mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -81,7 +81,7 @@
         make.top.equalTo(self.horizontalLine.mas_bottom);
         make.width.mas_equalTo(w);
         make.height.mas_equalTo(scaleY(44.0f));
-        make.bottom.equalTo(self).priorityLow();
+        make.bottom.equalTo(self);
     }];
     
     [self.rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -89,7 +89,6 @@
         make.top.equalTo(self.leftButton);
         make.width.mas_equalTo(w);
         make.height.mas_equalTo(scaleY(44.0f));
-        make.bottom.equalTo(self.leftButton);
     }];
 }
 
@@ -99,35 +98,12 @@
     self.titleLabel.text = title;
     self.messageLabel.text = message;
     
-    CGSize size =
-    [self suggestSizeForString:self.messageLabel.text
-                          Font:self.messageLabel.font
-                         width:[self viewWidth]];
-    [self.messageLabel mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(size.height);
-    }];
-    
 }
 
 #pragma mark - Private
 
 - (CGFloat)viewWidth {
     return scaleX(kAlertMaxContainerWidth - 56.0f);
-}
-
-- (CGSize)suggestSizeForString:(NSString *)string Font:(UIFont *)font width:(CGFloat)width {
-    CGSize size = CGSizeZero;
-    if (string) {
-        
-        size = [string boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX)
-                                    options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                 attributes:@{NSFontAttributeName:font}
-                                    context:nil].size;
-        
-        size.height += 2;
-    }
-    
-    return size;
 }
 
 #pragma mark - Property

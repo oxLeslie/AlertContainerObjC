@@ -15,12 +15,10 @@
 
 @interface AlertContainer : UIView
 
-@property (nonatomic, strong, readonly) UIView *bodyView;
-@property (nonatomic, strong, readonly) UIView *bottomView;
+@property (nonatomic, strong, readonly) UIView *containerView;
 
 - (instancetype)initAlertWithSuperView:(UIView *)superView
-                              bodyView:(UIView *)bodyView
-                            bottomView:(UIView *)bottomView;
+                         containerView:(UIView *)containerView;
 
 - (void)show;
 - (void)dismiss;

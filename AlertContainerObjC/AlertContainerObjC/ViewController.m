@@ -44,7 +44,7 @@
 - (void)showWithSuperView:(UIView *)superView {
     
     NSString *title = @"Alert";
-    NSString *message = @"AlertContainer";
+    NSString *message = @"AlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainerAlertContainer!";
     NSString *cancelTitle = @"cancel";
     NSString *confirmTitle = @"confirm";
     
@@ -59,7 +59,7 @@
     [view.leftButton addTarget:self action:@selector(buttonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     [view.rightButton addTarget:self action:@selector(buttonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.alertView = [[AlertContainer alloc] initAlertWithSuperView:superView bodyView:view bottomView:nil];
+    self.alertView = [[AlertContainer alloc] initAlertWithSuperView:superView containerView:view];
     [self.alertView show];
 }
 

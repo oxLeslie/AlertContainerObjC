@@ -97,8 +97,6 @@
 				D48C8D5120E625F300CBD85D /* module */,
 				D48C8D3B20E6024E00CBD85D /* AppDelegate.h */,
 				D48C8D3C20E6024E00CBD85D /* AppDelegate.m */,
-				D48C8D5820E62CAC00CBD85D /* AlertContentView.h */,
-				D48C8D5920E62CAC00CBD85D /* AlertContentView.m */,
 				D48C8D3E20E6024E00CBD85D /* ViewController.h */,
 				D48C8D3F20E6024F00CBD85D /* ViewController.m */,
 				D48C8D4120E6024F00CBD85D /* Main.storyboard */,
@@ -119,6 +117,8 @@
 				D48C8D5620E6290000CBD85D /* AutoScale.m */,
 				D48C8D5220E6269C00CBD85D /* AlertContainer.h */,
 				D48C8D5320E6269C00CBD85D /* AlertContainer.m */,
+				D48C8D5820E62CAC00CBD85D /* AlertContentView.h */,
+				D48C8D5920E62CAC00CBD85D /* AlertContentView.m */,
 			);
 			path = module;
 			sourceTree = "<group>";
